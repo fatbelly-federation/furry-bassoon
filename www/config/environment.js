@@ -18,7 +18,7 @@ module.exports = function(environment) {
         ApiUrl: 'https://pool.fatbelly.space/',
 
       // HTTP mining endpoint
-      HttpHost: 'https://pool.fatbelly.space/mining',
+      HttpHost: 'https://pool.fatbelly.space/ethereum',
       HttpPort: 9943,
 
       // Stratum mining endpoint
