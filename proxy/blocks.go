@@ -9,8 +9,8 @@ import (
 
 	"github.com/ethereum/go-ethereum/common"
 
-	"github.com/sammy007/open-ethereum-pool/rpc"
-	"github.com/sammy007/open-ethereum-pool/util"
+	"github.com/gpanula/furry-basson/rpc"
+	"github.com/gpanula/furry-basson/util"
 )
 
 const maxBacklog = 3
