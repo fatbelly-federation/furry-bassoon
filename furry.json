@@ -6,13 +6,13 @@
 
 	"proxy": {
 		"enabled": true,
-		"listen": "0.0.0.0:48888",
+		"listen": "127.0.0.1:48888",
 		"limitHeadersSize": 1024,
 		"limitBodySize": 256,
 		"behindReverseProxy": false,
-		"blockRefreshInterval": "120ms",
-		"stateUpdateInterval": "3s",
-		"difficulty": 2000,
+		"blockRefreshInterval": "250ms",
+		"stateUpdateInterval": "7s",
+		"difficulty": 20000,
 		"hashrateExpiration": "3h",
 
 		"healthCheck": true,
