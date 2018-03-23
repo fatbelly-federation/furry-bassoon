@@ -18,15 +18,15 @@ module.exports = function(environment) {
         ApiUrl: 'https://pool.fatbelly.space/',
 
       // HTTP mining endpoint
-      HttpHost: 'http://pool.fatbelly.space',
-      HttpPort: 48888,
+      HttpHost: 'https://pool.fatbelly.space/mining',
+      HttpPort: 9943,
 
       // Stratum mining endpoint
       StratumHost: 'pool.fatbelly.space',
       StratumPort: 48008,
 
       // Fee and payout details
-      PoolFee: '1%',
+      PoolFee: '0.7%',
       PayoutThreshold: '0.25 Ether',
 
       // For network hashrate (change for your favourite fork)
@@ -41,7 +41,7 @@ module.exports = function(environment) {
     /* Override ApiUrl just for development, while you are customizing
       frontend markup and css theme on your workstation.
     */
-    ENV.APP.ApiUrl = 'http://localhost:8080/'
+    ENV.APP.ApiUrl = 'https://pool.fatbelly.space/'
     ENV.APP.LOG_RESOLVER = true;
     ENV.APP.LOG_ACTIVE_GENERATION = true;
     ENV.APP.LOG_TRANSITIONS = true;
