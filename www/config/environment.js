@@ -15,7 +15,7 @@ module.exports = function(environment) {
 
     APP: {
       // API host and port
-        ApiUrl: 'https://pool.fatbelly.space/',
+      ApiUrl: 'https://pool.fatbelly.space/',
 
       // HTTP mining endpoint
       HttpHost: 'https://pool.fatbelly.space/ethereum',
