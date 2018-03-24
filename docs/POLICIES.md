@@ -6,6 +6,8 @@ Pool policy server collecting several stats on per IP basis. There are two optio
 
 First you need to configure your firewall to use `ipset`, read [this article](https://wiki.archlinux.org/index.php/Ipset).
 
+Also see [this article](https://serverfault.com/questions/674106/drop-ip-blacklist-with-firewalld-centos-7#674119) about using ipset with firewalld.
+
 Specify `ipset` name for banning in `policy` section. Timeout argument (in seconds) will be passed to this `ipset`. Stratum will use `os/exec` command like `sudo ipset add banlist x.x.x.x 1800` for banning, so you have to configure `sudo` properly and make sure that your system will never ask for password:
 
 Example `/etc/sudoers.d/pool` where `pool` is a username under which pool runs:
