@@ -5,13 +5,14 @@
         <h1 style="font-size: 24px">
           <strong>Open Ethereum Pool</strong>
         </h1>
-        <strong>Min. payout threshold: {{config.PayoutThreshold}}</strong>, Payouts run every eight hours<br/>
-        <span class="label label-success">PROP</span> Stable and profitable pool with regular payouts.
+        <strong>Min. payout threshold: {{config.PayoutThreshold}}</strong>, Payouts run every two hours<br/>
+        <span class="label label-success">PPLNS</span> Stable and profitable pool with regular payouts.
       </div>
       <div class="col-md-3 stats">
         <div><i class="fa fa-users"></i> Miners Online: <span id="poolHashrate">{{format-number stats.model.minersTotal}}</span></div>
         <div><i class="fa fa-tachometer"></i> Pool Hash Rate: <span id="poolHashrate">{{format-hashrate stats.model.hashrate}}</span></div>
         <div><i class="fa fa-money"></i> Pool Fee: <span id="poolFee" class="label label-success">{{config.PoolFee}}</span></div>
+        <div><i class="fa fa-money"></i> Transaction Fees paid to: <span id="TxFee" class="label label-success">{{config.TxFee}}</span></div>
         {{#if stats.model.stats.lastBlockFound}}
         <div><i class="fa fa-clock-o"></i> Last Block Found: <span>{{format-relative (seconds-to-ms stats.model.stats.lastBlockFound)}}</span></div>
         {{/if}}
