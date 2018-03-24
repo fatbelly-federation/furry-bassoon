@@ -1,0 +1,79 @@
+{
+	"threads": 1,
+	"coin": "eth",
+	"name": "main",
+  "pplns": 10000,
+
+	"proxy": {
+		"enabled": true,
+		"listen": "127.0.0.1:48888",
+		"limitHeadersSize": 1024,
+		"limitBodySize": 256,
+		"behindReverseProxy": true,
+		"blockRefreshInterval": "250ms",
+		"stateUpdateInterval": "7s",
+		"difficulty": 2000000,
+		"hashrateExpiration": "3h",
+
+		"healthCheck": true,
+		"maxFails": 100,
+
+		"stratum": {
+			"enabled": true,
+			"listen": "0.0.0.0:48008",
+			"timeout": "120s",
+			"maxConn": 1024
+		},
+
+		"policy": {
+			"workers": 8,
+			"resetInterval": "60m",
+			"refreshInterval": "1m",
+
+			"banning": {
+				"enabled": true,
+				"ipset": "blacklist",
+				"timeout": 3600,
+				"invalidPercent": 30,
+				"checkThreshold": 30,
+				"malformedLimit": 5
+			},
+			"limits": {
+				"enabled": true,
+				"limit": 30,
+				"grace": "5m",
+				"limitJump": 10
+			}
+		}
+	},
+
+	"api": {
+		"enabled": false
+	},
+
+	"upstreamCheckInterval": "3s",
+	"upstream": [
+		{
+			"name": "main",
+			"url": "http://127.0.0.1:8545",
+			"timeout": "10s"
+		}
+	],
+
+	"redis": {
+		"endpoint": "127.0.0.1:6379",
+		"poolSize": 20,
+		"database": 0,
+		"password": ""
+	},
+
+	"unlocker": {
+		"enabled": false
+	},
+
+	"payouts": {
+		"enabled": false
+	},
+
+	"newrelicEnabled": false
+}

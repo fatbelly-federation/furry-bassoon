@@ -1,0 +1,55 @@
+{
+	"threads": 1,
+	"coin": "eth",
+	"name": "main",
+  "pplns": 10000,
+
+	"proxy": {
+		"enabled": false,
+
+		"stratum": {
+			"enabled": false
+    }
+	},
+
+	"api": {
+		"enabled": false
+	},
+
+	"upstreamCheckInterval": "3s",
+	"upstream": [
+		{
+			"name": "main",
+			"url": "http://127.0.0.1:8545",
+			"timeout": "10s"
+		}
+	],
+
+	"redis": {
+		"endpoint": "127.0.0.1:6379",
+		"poolSize": 20,
+		"database": 0,
+		"password": ""
+	},
+
+	"unlocker": {
+		"enabled": false
+	},
+
+	"payouts": {
+		"enabled": true,
+		"requirePeers": 5,
+		"interval": "120m",
+		"daemon": "http://127.0.0.1:8545",
+		"timeout": "30s",
+		"address": "0x9220ef2365080994100265742e9e48e85a07292f",
+		"gas": "2100",
+		"gasPrice": "500000000",
+		"autoGas": true,
+		"threshold": 20000000,
+		"bgsave": true,
+		"concurrentTx": 10
+	},
+
+	"newrelicEnabled": false
+}

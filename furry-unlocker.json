@@ -1,0 +1,53 @@
+{
+	"threads": 1,
+	"coin": "eth",
+	"name": "main",
+  "pplns": 10000,
+
+	"proxy": {
+		"enabled": false,
+
+		"stratum": {
+			"enabled": false
+    }
+	},
+
+	"api": {
+		"enabled": false
+	},
+
+	"upstreamCheckInterval": "3s",
+	"upstream": [
+		{
+			"name": "main",
+			"url": "http://127.0.0.1:8545",
+			"timeout": "10s"
+		}
+	],
+
+	"redis": {
+		"endpoint": "127.0.0.1:6379",
+		"poolSize": 20,
+		"database": 0,
+		"password": ""
+	},
+
+	"unlocker": {
+		"enabled": true,
+		"poolFee": 1,
+		"poolFeeAddress": "0x00857bEf3A7Dc24396B2371a55B70Ad87D4D1C69",
+		"donate": true,
+		"depth": 120,
+		"immatureDepth": 20,
+		"keepTxFees": true,
+		"interval": "30m",
+		"daemon": "http://127.0.0.1:8545",
+		"timeout": "10s"
+	},
+
+	"payouts": {
+		"enabled": false
+	},
+
+	"newrelicEnabled": false
+}

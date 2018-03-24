@@ -1,0 +1,53 @@
+{
+	"threads": 1,
+	"coin": "eth",
+	"name": "main",
+  "pplns": 10000,
+
+	"proxy": {
+		"enabled": false,
+
+		"stratum": {
+			"enabled": false
+		}
+	},
+
+	"api": {
+		"enabled": true,
+		"purgeOnly": false,
+		"purgeInterval": "960m",
+		"listen": "127.0.0.1:8080",
+		"statsCollectInterval": "5s",
+		"hashrateWindow": "15m",
+		"hashrateLargeWindow": "4h",
+		"luckWindow": [64, 128, 256],
+		"payments": 100,
+		"blocks": 100
+	},
+
+	"upstreamCheckInterval": "3s",
+	"upstream": [
+		{
+			"name": "main",
+			"url": "http://127.0.0.1:8545",
+			"timeout": "10s"
+		}
+	],
+
+	"redis": {
+		"endpoint": "127.0.0.1:6379",
+		"poolSize": 20,
+		"database": 0,
+		"password": ""
+	},
+
+	"unlocker": {
+		"enabled": false
+	},
+
+	"payouts": {
+		"enabled": false
+	},
+
+	"newrelicEnabled": false
+}
