@@ -9,7 +9,7 @@ import (
 	"net"
 	"time"
 
-	"github.com/gpanula/furry-basson/util"
+	"github.com/fatbelly-federation/furry-basson/util"
 )
 
 const (

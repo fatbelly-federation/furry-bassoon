@@ -13,10 +13,10 @@ import (
 
 	"github.com/gorilla/mux"
 
-	"github.com/gpanula/furry-basson/policy"
-	"github.com/gpanula/furry-basson/rpc"
-	"github.com/gpanula/furry-basson/storage"
-	"github.com/gpanula/furry-basson/util"
+	"github.com/fatbelly-federation/furry-basson/policy"
+	"github.com/fatbelly-federation/furry-basson/rpc"
+	"github.com/fatbelly-federation/furry-basson/storage"
+	"github.com/fatbelly-federation/furry-basson/util"
 )
 
 type ProxyServer struct {

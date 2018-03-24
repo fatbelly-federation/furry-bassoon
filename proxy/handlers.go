@@ -5,8 +5,8 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/gpanula/furry-basson/rpc"
-	"github.com/gpanula/furry-basson/util"
+	"github.com/fatbelly-federation/furry-basson/rpc"
+	"github.com/fatbelly-federation/furry-basson/util"
 )
 
 // Allow only lowercase hexadecimal with 0x prefix

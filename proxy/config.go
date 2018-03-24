@@ -1,10 +1,10 @@
 package proxy
 
 import (
-	"github.com/gpanula/furry-basson/api"
-	"github.com/gpanula/furry-basson/payouts"
-	"github.com/gpanula/furry-basson/policy"
-	"github.com/gpanula/furry-basson/storage"
+	"github.com/fatbelly-federation/furry-basson/api"
+	"github.com/fatbelly-federation/furry-basson/payouts"
+	"github.com/fatbelly-federation/furry-basson/policy"
+	"github.com/fatbelly-federation/furry-basson/storage"
 )
 
 type Config struct {

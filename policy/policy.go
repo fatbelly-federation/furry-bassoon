@@ -9,8 +9,8 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/gpanula/furry-basson/storage"
-	"github.com/gpanula/furry-basson/util"
+	"github.com/fatbelly-federation/furry-basson/storage"
+	"github.com/fatbelly-federation/furry-basson/util"
 )
 
 type Config struct {

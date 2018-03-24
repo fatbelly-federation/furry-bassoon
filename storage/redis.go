@@ -9,7 +9,7 @@ import (
 
 	"gopkg.in/redis.v3"
 
-	"github.com/gpanula/furry-basson/util"
+	"github.com/fatbelly-federation/furry-basson/util"
 )
 
 type Config struct {

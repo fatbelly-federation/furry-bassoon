@@ -14,7 +14,7 @@ import (
 
 	"github.com/ethereum/go-ethereum/common"
 
-	"github.com/gpanula/furry-basson/util"
+	"github.com/fatbelly-federation/furry-basson/util"
 )
 
 type RPCClient struct {
