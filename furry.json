@@ -53,11 +53,11 @@
 		"purgeInterval": "960m",
 		"listen": "127.0.0.1:8080",
 		"statsCollectInterval": "5s",
-		"hashrateWindow": "2m",
-		"hashrateLargeWindow": "3h",
+		"hashrateWindow": "15m",
+		"hashrateLargeWindow": "4h",
 		"luckWindow": [64, 128, 256],
-		"payments": 3,
-		"blocks": 1
+		"payments": 100,
+		"blocks": 100
 	},
 
 	"upstreamCheckInterval": "3s",
@@ -83,7 +83,7 @@
 		"donate": true,
 		"depth": 120,
 		"immatureDepth": 20,
-		"keepTxFees": false,
+		"keepTxFees": true,
 		"interval": "30m",
 		"daemon": "http://127.0.0.1:8545",
 		"timeout": "10s"
@@ -92,14 +92,14 @@
 	"payouts": {
 		"enabled": true,
 		"requirePeers": 5,
-		"interval": "480m",
+		"interval": "120m",
 		"daemon": "http://127.0.0.1:8545",
 		"timeout": "30s",
 		"address": "0x9220ef2365080994100265742e9e48e85a07292f",
 		"gas": "2100",
 		"gasPrice": "500000000",
 		"autoGas": true,
-		"threshold": 25000000,
+		"threshold": 20000000,
 		"bgsave": true,
 		"concurrentTx": 10
 	},

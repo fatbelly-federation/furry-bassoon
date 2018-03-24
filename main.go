@@ -13,10 +13,10 @@ import (
 
 	"github.com/yvasiyarov/gorelic"
 
-	"github.com/fatbelly-federation/furry-basson/api"
-	"github.com/fatbelly-federation/furry-basson/payouts"
-	"github.com/fatbelly-federation/furry-basson/proxy"
-	"github.com/fatbelly-federation/furry-basson/storage"
+	"github.com/fatbelly-federation/furry-bassoon/api"
+	"github.com/fatbelly-federation/furry-bassoon/payouts"
+	"github.com/fatbelly-federation/furry-bassoon/proxy"
+	"github.com/fatbelly-federation/furry-bassoon/storage"
 )
 
 var cfg proxy.Config
@@ -82,7 +82,7 @@ func main() {
 
 	startNewrelic()
 
-	backend = storage.NewRedisClient(&cfg.Redis, cfg.Coin)
+	backend = storage.NewRedisClient(&cfg.Redis, cfg.Coin, cfg.Pplns)
 	pong, err := backend.Check()
 	if err != nil {
 		log.Printf("Can't establish connection to backend: %v", err)

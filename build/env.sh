@@ -11,10 +11,10 @@ fi
 workspace="$PWD/build/_workspace"
 root="$PWD"
 ethdir="$workspace/src/github.com/fatbelly-federation"
-if [ ! -L "$ethdir/furry-basson" ]; then
+if [ ! -L "$ethdir/furry-bassoon" ]; then
     mkdir -p "$ethdir"
     cd "$ethdir"
-    ln -s ../../../../../. furry-basson
+    ln -s ../../../../../. furry-bassoon
     cd "$root"
 fi
 
