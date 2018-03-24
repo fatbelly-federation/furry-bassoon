@@ -25,8 +25,8 @@ GOBIN="$PWD/build/bin"
 export GOPATH GOBIN
 
 # Run the command inside the workspace.
-cd "$ethdir/furry-basson"
-PWD="$ethdir/furry-basson"
+cd "$ethdir/furry-bassoon"
+PWD="$ethdir/furry-bassoon"
 
 # Launch the arguments with the configured environment.
 exec "$@"
