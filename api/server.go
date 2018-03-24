@@ -12,8 +12,8 @@ import (
 
 	"github.com/gorilla/mux"
 
-	"github.com/fatbelly-federation/furry-basson/storage"
-	"github.com/fatbelly-federation/furry-basson/util"
+	"github.com/fatbelly-federation/furry-bassoon/storage"
+	"github.com/fatbelly-federation/furry-bassoon/util"
 )
 
 type ApiConfig struct {

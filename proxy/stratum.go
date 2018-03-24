@@ -9,7 +9,7 @@ import (
 	"net"
 	"time"
 
-	"github.com/fatbelly-federation/furry-basson/util"
+	"github.com/fatbelly-federation/furry-bassoon/util"
 )
 
 const (
@@ -53,7 +53,7 @@ func (s *ProxyServer) ListenTCP() {
 		accept <- n
 		go func(cs *Session) {
 			err = s.handleTCPClient(cs)
-			if err != nil {
+			if err != nil || cs.lastErr != nil {
 				s.removeSession(cs)
 				conn.Close()
 			}

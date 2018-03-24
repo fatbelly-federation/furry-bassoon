@@ -1,10 +1,10 @@
 package proxy
 
 import (
-	"github.com/fatbelly-federation/furry-basson/api"
-	"github.com/fatbelly-federation/furry-basson/payouts"
-	"github.com/fatbelly-federation/furry-basson/policy"
-	"github.com/fatbelly-federation/furry-basson/storage"
+	"github.com/fatbelly-federation/furry-bassoon/api"
+	"github.com/fatbelly-federation/furry-bassoon/payouts"
+	"github.com/fatbelly-federation/furry-bassoon/policy"
+	"github.com/fatbelly-federation/furry-bassoon/storage"
 )
 
 type Config struct {
@@ -17,6 +17,7 @@ type Config struct {
 	Threads int `json:"threads"`
 
 	Coin  string         `json:"coin"`
+	Pplns int64          `json:"pplns"`
 	Redis storage.Config `json:"redis"`
 
 	BlockUnlocker payouts.UnlockerConfig `json:"unlocker"`

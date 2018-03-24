@@ -4,15 +4,16 @@ import (
 	"fmt"
 	"log"
 	"math/big"
+	"os"
 	"strconv"
 	"strings"
 	"time"
 
 	"github.com/ethereum/go-ethereum/common/math"
 
-	"github.com/fatbelly-federation/furry-basson/rpc"
-	"github.com/fatbelly-federation/furry-basson/storage"
-	"github.com/fatbelly-federation/furry-basson/util"
+	"github.com/fatbelly-federation/furry-bassoon/rpc"
+	"github.com/fatbelly-federation/furry-bassoon/storage"
+	"github.com/fatbelly-federation/furry-bassoon/util"
 )
 
 type UnlockerConfig struct {
@@ -250,6 +251,7 @@ func handleUncle(height int64, uncle *rpc.GetBlockReply, candidate *storage.Bloc
 func (u *BlockUnlocker) unlockPendingBlocks() {
 	if u.halt {
 		log.Println("Unlocking suspended due to last critical error:", u.lastFail)
+		os.Exit(1)
 		return
 	}
 
@@ -453,7 +455,12 @@ func (u *BlockUnlocker) calculateRewards(block *storage.BlockData) (*big.Rat, *b
 		return nil, nil, nil, nil, err
 	}
 
-	rewards := calculateRewardsForShares(shares, block.TotalShares, minersProfit)
+	totalShares := int64(0)
+	for _, val := range shares {
+		totalShares += val
+	}
+
+	rewards := calculateRewardsForShares(shares, totalShares, minersProfit)
 
 	if block.ExtraReward != nil {
 		extraReward := new(big.Rat).SetInt(block.ExtraReward)
@@ -515,9 +522,13 @@ func getRewardForUncle(height int64) *big.Int {
 
 func getUncleReward(uHeight, height int64) *big.Int {
 	reward := getConstReward(height)
-	k := height - uHeight
-	reward.Mul(big.NewInt(8-k), reward)
-	reward.Div(reward, big.NewInt(8))
+	if height > byzantiumHardForkHeight {
+		reward.Div(reward, big.NewInt(32))
+	} else {
+		k := height - uHeight
+		reward.Mul(big.NewInt(8-k), reward)
+		reward.Div(reward, big.NewInt(8))
+	}
 	return reward
 }
 
