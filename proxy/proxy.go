@@ -13,10 +13,10 @@ import (
 
 	"github.com/gorilla/mux"
 
-	"github.com/fatbelly-federation/furry-basson/policy"
-	"github.com/fatbelly-federation/furry-basson/rpc"
-	"github.com/fatbelly-federation/furry-basson/storage"
-	"github.com/fatbelly-federation/furry-basson/util"
+	"github.com/ellaism/open-ethereum-pool/policy"
+	"github.com/ellaism/open-ethereum-pool/rpc"
+	"github.com/ellaism/open-ethereum-pool/storage"
+	"github.com/ellaism/open-ethereum-pool/util"
 )
 
 type ProxyServer struct {
@@ -44,6 +44,7 @@ type Session struct {
 	sync.Mutex
 	conn  *net.TCPConn
 	login string
+	lastErr error
 }
 
 func NewProxy(cfg *Config, backend *storage.RedisClient) *ProxyServer {

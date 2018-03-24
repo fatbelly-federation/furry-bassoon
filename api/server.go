@@ -12,8 +12,8 @@ import (
 
 	"github.com/gorilla/mux"
 
-	"github.com/fatbelly-federation/furry-basson/storage"
-	"github.com/fatbelly-federation/furry-basson/util"
+	"github.com/ellaism/open-ethereum-pool/storage"
+	"github.com/ellaism/open-ethereum-pool/util"
 )
 
 type ApiConfig struct {
