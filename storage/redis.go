@@ -724,6 +724,11 @@ func (r *RedisClient) CollectStats(smallWindow time.Duration, maxBlocks, maxPaym
 		tx.ZCard(r.formatKey("blocks", "candidates"))
 		tx.ZCard(r.formatKey("blocks", "immature"))
 		tx.ZCard(r.formatKey("blocks", "matured"))
+    // paymentsTotal returns (nil) until there has been a payment
+    // this will cause an error and CollectStats will fail
+    // work-around is to set paymentTotal to zero via
+    // "HSET" "eth:paymentsTotal" "all" 0
+    // yeah, there should be a way to init that value at start-up
 		tx.HGet(r.formatKey("paymentsTotal"), "all")
 		tx.ZRevRangeWithScores(r.formatKey("payments", "all"), 0, maxPayments-1)
 		tx.LLen(r.formatKey("lastshares"))
