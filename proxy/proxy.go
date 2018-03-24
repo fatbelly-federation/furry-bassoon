@@ -13,10 +13,10 @@ import (
 
 	"github.com/gorilla/mux"
 
-	"github.com/ellaism/open-ethereum-pool/policy"
-	"github.com/ellaism/open-ethereum-pool/rpc"
-	"github.com/ellaism/open-ethereum-pool/storage"
-	"github.com/ellaism/open-ethereum-pool/util"
+	"github.com/fatbelly-federation/furry-bassoon/policy"
+	"github.com/fatbelly-federation/furry-bassoon/rpc"
+	"github.com/fatbelly-federation/furry-bassoon/storage"
+	"github.com/fatbelly-federation/furry-bassoon/util"
 )
 
 type ProxyServer struct {

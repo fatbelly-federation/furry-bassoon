@@ -9,7 +9,7 @@ import (
 
 	"gopkg.in/redis.v3"
 
-	"github.com/ellaism/open-ethereum-pool/util"
+	"github.com/fatbelly-federation/furry-bassoon/util"
 )
 
 type Config struct {

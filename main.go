@@ -13,10 +13,10 @@ import (
 
 	"github.com/yvasiyarov/gorelic"
 
-	"github.com/ellaism/open-ethereum-pool/api"
-	"github.com/ellaism/open-ethereum-pool/payouts"
-	"github.com/ellaism/open-ethereum-pool/proxy"
-	"github.com/ellaism/open-ethereum-pool/storage"
+	"github.com/fatbelly-federation/furry-bassoon/api"
+	"github.com/fatbelly-federation/furry-bassoon/payouts"
+	"github.com/fatbelly-federation/furry-bassoon/proxy"
+	"github.com/fatbelly-federation/furry-bassoon/storage"
 )
 
 var cfg proxy.Config

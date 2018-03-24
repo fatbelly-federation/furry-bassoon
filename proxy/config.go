@@ -1,10 +1,10 @@
 package proxy
 
 import (
-	"github.com/ellaism/open-ethereum-pool/api"
-	"github.com/ellaism/open-ethereum-pool/payouts"
-	"github.com/ellaism/open-ethereum-pool/policy"
-	"github.com/ellaism/open-ethereum-pool/storage"
+	"github.com/fatbelly-federation/furry-bassoon/api"
+	"github.com/fatbelly-federation/furry-bassoon/payouts"
+	"github.com/fatbelly-federation/furry-bassoon/policy"
+	"github.com/fatbelly-federation/furry-bassoon/storage"
 )
 
 type Config struct {

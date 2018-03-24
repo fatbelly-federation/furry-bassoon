@@ -6,8 +6,8 @@ import (
 	"strings"
 	"errors"
 
-	"github.com/ellaism/open-ethereum-pool/rpc"
-	"github.com/ellaism/open-ethereum-pool/util"
+	"github.com/fatbelly-federation/furry-bassoon/rpc"
+	"github.com/fatbelly-federation/furry-bassoon/util"
 )
 
 // Allow only lowercase hexadecimal with 0x prefix

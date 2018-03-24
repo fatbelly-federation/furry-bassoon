@@ -9,7 +9,7 @@ import (
 	"net"
 	"time"
 
-	"github.com/ellaism/open-ethereum-pool/util"
+	"github.com/fatbelly-federation/furry-bassoon/util"
 )
 
 const (
