@@ -6,7 +6,7 @@
 
 	"proxy": {
 		"enabled": true,
-		"listen": "127.0.0.1:48888",
+		"listen": "0.0.0.0:48888",
 		"limitHeadersSize": 1024,
 		"limitBodySize": 256,
 		"behindReverseProxy": true,
