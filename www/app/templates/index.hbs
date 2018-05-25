@@ -42,7 +42,10 @@
   <div>
     <hr/>
     <h4 class="note note-info text-center">
-      ethminer.exe -F {{config.HttpHost}}:{{config.HttpPort}}/&lt;address&gt;/&lt;worker&gt; -G
+      ethminer.exe -F {{config.HttpHost}}:{{config.HttpPort}}/&lt;address&gt;/&lt;worker&gt;
+    </h4>
+    <h4 class="note note-info text-center">
+      EthDcrMiner64.exe -epool {{config.StratumHost}}:{{config.StratumPort}} -ewal &lt;addresss&gt; -eworker &lt;worker&gt;
     </h4>
   </div>
 </div>
